@@ -15,7 +15,7 @@ const pool = new Pool({
 
 // Manejo de errores de conexión
 pool.on('error', (err, client) => {
-    console.error('Error inesperado en la conexión', err);
+    console.error('Error en la conexión', err);
     process.exit(-1);
 });
 
@@ -26,7 +26,7 @@ app.use(express.json());
 app.get('/api/healthcheck', async (req, res) => {
     try {
         await pool.query('SELECT 1');
-        res.status(200).json({ message: 'Conexión exitosa con la base de datos' });
+        res.status(200).json({ message: 'Conexión exitosa con la base de datos xD' });
     } catch (error) {
         console.error('Error al conectar con la base de datos:', error);
         res.status(500).json({ error: 'Error al conectar con la base de datos' });
