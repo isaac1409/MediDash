@@ -1,37 +1,86 @@
 # MediDash
-MediDash is software designed to efficiently manage medication distribution in hospital environments. This system facilitates coordination between
-medical staff, improves the availability of medications and reduces patient waiting times. With features ranging from inventory tracking to
-medication delivery optimization
 
-## Config Node.js
-puerto 3001
+MediDash es un software diseñado para gestionar eficientemente la distribución de medicamentos en entornos hospitalarios. Este sistema facilita la coordinación entre el personal médico, mejora la disponibilidad de medicamentos y reduce los tiempos de espera de los pacientes. Con características que van desde el seguimiento de inventario hasta la optimización de la entrega de medicamentos.
 
-## Config Postgresql
-password:medidash
-puerto 5432
+## Configuración
 
-## Valida su funcionamiento
+### Node.js
 
+Asegúrate de tener Node.js instalado en tu sistema.
 
-Instala el gestor de dependencias de Node.js
+#### Backend
+
+El backend se ejecutará en el puerto 3001.
+
+Instala las dependencias del backend:
+
 ```bash
+cd backend
 npm install
 ```
 
-Instala dependencia para postgresql (esto en caso de que clone el repo nuevamente y no lo tengas instalado)
+Ejecuta el backend:
+
 ```bash
-npm install pg
+npm start
 ```
 
-Ejecuta la aplicacion 
+#### Frontend
 
-``` bash
-    node server.js
+El frontend se ejecutará en el puerto 3002.
+
+Instala las dependencias del frontend:
+
+```bash
+cd medidash
+npm install
 ```
 
-Despues inicia el contenedor
+Ejecuta el frontend:
 
-``` bash
-    docker-compose up
-
+```bash
+npm start
 ```
+
+### PostgreSQL
+
+Asegúrate de tener PostgreSQL instalado en tu sistema.
+
+El servicio de PostgreSQL estará disponible en el puerto 5432.
+
+## Docker
+
+Si prefieres ejecutar la aplicación en contenedores Docker, sigue estos pasos:
+
+1. Asegúrate de tener Docker instalado en tu sistema.
+
+2. Clona este repositorio:
+
+```bash
+git clone https://github.com/TuUsuario/TuRepositorio.git
+```
+
+3. Navega al directorio del repositorio clonado:
+
+```bash
+cd TuRepositorio
+```
+
+4. Ejecuta el siguiente comando para iniciar los contenedores Docker:
+
+```bash
+docker-compose up
+```
+
+Esto iniciará los contenedores Docker para el backend, frontend y PostgreSQL.
+
+## Validación
+
+Una vez que hayas completado los pasos anteriores, puedes validar que la aplicación esté funcionando correctamente.
+
+Abre un navegador web y visita las siguientes URL:
+
+- Backend: [http://localhost:3001](http://localhost:3001)
+- Frontend: [http://localhost:3002](http://localhost:3002)
+
+Si todo está configurado correctamente, deberías ver la aplicación funcionando en tu navegador.
