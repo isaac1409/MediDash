@@ -4,11 +4,40 @@ MediDash es un software diseñado para gestionar eficientemente la distribución
 
 ## Configuración
 
+## Docker
+
+Para ejecutar la aplicación en contenedores Docker, sigue estos pasos:
+
+1. Asegúrate de tener Docker instalado en tu sistema.
+
+2. Clona este repositorio:
+
+```bash
+git clone https://github.com/isaac1409/MediDash.git
+```
+
+3. Navega al directorio del repositorio clonado:
+
+```bash
+cd MediDash
+```
+
+4. Ejecuta el siguiente comando para iniciar los contenedores Docker:
+
+```bash
+docker-compose up
+```
+
+Esto iniciará los contenedores Docker para el backend, frontend y PostgreSQL.
+
+### Validaion manual
+Para para validar de manera manual cada dependencia y cada parte, sigue los siguientes pasos:
+
 ### Node.js
 
 Asegúrate de tener Node.js instalado en tu sistema.
 
-#### Backend
+### Backend
 
 El backend se ejecutará en el puerto 3001.
 
@@ -25,7 +54,7 @@ Ejecuta el backend:
 npm start
 ```
 
-#### Frontend
+### Frontend
 
 El frontend se ejecutará en el puerto 3002.
 
@@ -41,38 +70,11 @@ Ejecuta el frontend:
 ```bash
 npm start
 ```
-
 ### PostgreSQL
 
 Asegúrate de tener PostgreSQL instalado en tu sistema.
 
 El servicio de PostgreSQL estará disponible en el puerto 5432.
-
-## Docker
-
-Si prefieres ejecutar la aplicación en contenedores Docker, sigue estos pasos:
-
-1. Asegúrate de tener Docker instalado en tu sistema.
-
-2. Clona este repositorio:
-
-```bash
-git clone https://github.com/isaac1409/MediDash.git
-```
-
-3. Navega al directorio del repositorio clonado:
-
-```bash
-cd TuRepositorio
-```
-
-4. Ejecuta el siguiente comando para iniciar los contenedores Docker:
-
-```bash
-docker-compose up
-```
-
-Esto iniciará los contenedores Docker para el backend, frontend y PostgreSQL.
 
 ## Validación
 
