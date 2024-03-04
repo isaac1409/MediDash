@@ -57,7 +57,7 @@ Si prefieres ejecutar la aplicación en contenedores Docker, sigue estos pasos:
 2. Clona este repositorio:
 
 ```bash
-git clone https://github.com/TuUsuario/TuRepositorio.git
+git clone https://github.com/isaac1409/MediDash.git
 ```
 
 3. Navega al directorio del repositorio clonado:
