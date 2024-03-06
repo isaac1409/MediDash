@@ -16,11 +16,12 @@ const Home = (props) => {
 
     return (
         <div className="mainContainer">
+            <div className={'boxContainer'}>
             <div className={'titleContainer'}>
                 <div>Medidash</div>
             </div>
             <br/>
-            <div>Gestión de medicamentos, salud optimizada.</div>
+            <div className='textCenter'>Gestión de medicamentos, salud optimizada.</div>
             <div className={'buttonContainer'}>
                 <input
                 className={'inputButton'}
@@ -28,6 +29,7 @@ const Home = (props) => {
                 onClick={onButtonClick}
                 value={loggedIn ? 'Log out' : 'Log in'}
                 />
+            </div>
             </div>
         </div>
     )

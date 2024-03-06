@@ -1,58 +1,22 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainContainer {
+  background-image: url('./assets/background_image_example.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center;
+  height: 100vh;
 }
 
 .boxContainer {
-  width: 450px; /* Anchura deseada */
-  height: 500px; /* Altura deseada */
-  margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
+  width: 450px;
+  height: auto;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega sombra para hacer que la caja parezca flotar */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-}
-.mainContainer {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
 }
 
 .titleContainer {
@@ -87,13 +51,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 260px;
+  height: 100px;
 }
 
 .inputContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
@@ -109,4 +73,13 @@
   border-radius: 8px;
   border: 1px solid grey;
   padding-left: 8px;
+}
+
+.textCenter {
+  text-align: center;
+  margin-bottom: 20px; /* Ajusta este valor según sea necesario */
+}
+
+.inputButton:hover {
+  background-color: #0056b3;
 }

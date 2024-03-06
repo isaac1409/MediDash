@@ -35,8 +35,8 @@ const Login = (props) => {
     }
 
     return (
-        <div className={'boxContainer'}>
-            <div className={'mainContainer'}>
+        <div className={'mainContainer'}>
+            <div className={'boxContainer'}>
                 <div className={'titleContainer'}>
                     <div>Login</div>
                 </div>
@@ -53,6 +53,7 @@ const Login = (props) => {
                 <br />
                 <div className={'inputContainer'}>
                     <input
+                    type="password"
                     value={password}
                     placeholder="Enter your password here"
                     onChange={(ev) => setPassword(ev.target.value)}
