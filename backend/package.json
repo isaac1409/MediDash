@@ -1,13 +1,20 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "ackend for the Medidash application",
   "main": "index.js",
   "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "medidash",
+    "backend",
+    "express",
+    "node.js"
+  ],
+  "author": "Isaac Munoz",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -18,6 +25,6 @@
     "pg": "^8.11.3"
   },
   "devDependencies": {
-    "nodemon": "^1.18.10"
+    "nodemon": "^2.0.13"
   }
 }

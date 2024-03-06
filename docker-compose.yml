@@ -19,7 +19,6 @@ services:
     working_dir: /backend
     volumes:
       - ./backend:/backend
-      - /backend/node_modules
       - ./logs/backend:/app/error.log
     environment:
       - NODE_ENV=production
@@ -27,7 +26,7 @@ services:
     ports:
       - "3001:3001"
     command: >
-      bash -c "npm install && npm start"
+      bash -c "npm install -g nodemon && npm run dev "
     depends_on:
       - postgres
 
@@ -37,7 +36,6 @@ services:
     working_dir: /medidash
     volumes:
       - ./medidash:/medidash
-      - /medidash/node_modules
       - ./logs/medidash:/app/error.log
     environment:
       - NODE_ENV=production

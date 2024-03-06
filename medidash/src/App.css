@@ -19,6 +19,16 @@
   padding: 20px;
 }
 
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  width: 250px;
+  margin-right: 10px;
+}
+
 .titleContainer {
   display: flex;
   flex-direction: column;

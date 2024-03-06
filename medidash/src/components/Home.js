@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import logo from '../assets/logo_MD.png';
 
 const Home = (props) => {
     const { loggedIn, email } = props
@@ -18,7 +19,10 @@ const Home = (props) => {
         <div className="mainContainer">
             <div className={'boxContainer'}>
             <div className={'titleContainer'}>
-                <div>Medidash</div>
+                <div className="logoContainer">
+                        <img className="logo" src={logo} alt="Medidash Logo" />
+                    </div>
+                <div>MediDash</div>
             </div>
             <br/>
             <div className='textCenter'>Gestión de medicamentos, salud optimizada.</div>
