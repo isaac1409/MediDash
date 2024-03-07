@@ -17,19 +17,25 @@ const signToken = id => {
 router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
+        
+        // Validación de datos de entrada
+        if (!email || !password) {
+            return res.status(400).json({ message: 'Por favor, proporciona un correo electrónico y una contraseña válidos.' });
+        }
+        
         const query = 'SELECT * FROM users WHERE email = $1';
         const { rows } = await pool.query(query, [email]);
         const user = rows[0];
         
         if (!user || !bcrypt.compareSync(password, user.password)) {
-            return res.status(401).json({ message: errLoging, status: 403 });
+            return res.status(401).json({ message: 'Credenciales incorrectas. Por favor, intenta de nuevo.' });
         }
         
         const token = signToken(user.id);
-        return res.status(200).json({ message: logSuccess, token, user: email, rol: user.rol, userid: user.fId, status: 200 });
-    } catch (error) {
+        return res.status(200).json({ message: 'Inicio de sesión exitoso.', token, user: email, rol: user.rol, userId: user.fId });
+    }catch (error) {
         console.error('Error en el inicio de sesión:', error);
-        return res.status(500).json({ error });
+        return res.status(500).json({ error: 'Ocurrió un error al iniciar sesión. Por favor, inténtalo de nuevo más tarde.' });
     }
 });
 

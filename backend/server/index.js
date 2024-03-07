@@ -16,15 +16,16 @@ app.get('/api/healthcheck', async (req, res) => {
         res.status(500).json({ error: 'Error al conectar con la base de datos' });
     }
 });
+// Iniciar el servidor
+app.listen(PORT, () => {
+    console.log(`Servidor Express corriendo en el puerto ${PORT}`);
+});
+
+//Aqui van a ir las rutas
 
 // Middleware para manejar rutas no encontradas
 app.use((req, res, next) => {
     res.status(404).json({
         message: '¡Ups! Estas perdido. Consulta la documentación de la API para encontrar una ruta correcta'
     });
-});
-
-// Iniciar el servidor
-app.listen(PORT, () => {
-    console.log(`Servidor Express corriendo en el puerto ${PORT}`);
 });
