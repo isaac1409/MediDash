@@ -40,6 +40,8 @@ services:
       bash -c "npm install -g nodemon && npm run dev "
     depends_on:
       - postgres
+    networks:
+      - medidash-network  
 
   medidash:
     image: node:18
@@ -54,5 +56,7 @@ services:
     ports:
       - "3002:3002"
     command: >
-      bash -c "PORT=3002 npm install && PORT=3002 npm start"    
+      bash -c "PORT=3002 npm install && PORT=3002 npm start" 
+    networks:
+      - medidash-network  
 
