@@ -21,7 +21,7 @@ app.listen(PORT, () => {
     console.log(`Servidor Express corriendo en el puerto ${PORT}`);
 });
 
-//Aqui van a ir las rutas
+//Aqui van las rutas
 
 // Middleware para manejar rutas no encontradas
 app.use((req, res, next) => {

@@ -21,7 +21,7 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql/data
     networks:
-    - medidash-network
+      - medidash-network
 
   backend:
     image: node:18
